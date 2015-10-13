@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
+#import "APService.h"
+@interface AppDelegate ()<UIAlertViewDelegate>
 
 @end
 
@@ -16,8 +16,60 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [APService setupWithOption:launchOptions];
+    [APService registerForRemoteNotificationTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil];
+    
+    
     return YES;
+}
+
+//接受推送信息
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    [APService registerDeviceToken:deviceToken];
+}
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    NSLog(@"接收到的消息--%@",userInfo);
+    UIAlertView*alv=[[UIAlertView alloc]initWithTitle:nil message:userInfo[@"aps"][@"alert"] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"立即玩",@"不了", nil];
+    alv.delegate=self;
+    alv.tintColor=[UIColor colorWithWhite:0.8 alpha:0.6];
+    [alv show];
+}
+
+#pragma marks -- UIAlertViewDelegate
+
+#pragma mark - AlertView即将显示时
+-(void)willPresentAlertView:(UIAlertView *)alertView
+{
+    NSLog(@"AlertView即将显示时");
+}
+#pragma mark - AlertView已经显示时的事件
+-(void)didPresentAlertView:(UIAlertView *)alertView
+{
+    NSLog(@"AlertView已经显示时的事件");
+}
+
+#pragma mark - 根据被点击按钮的索引处理点击事件
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"根据被点击按钮的索引处理点击事件 :%d",buttonIndex);
+}
+#pragma mark - AlertView的取消按钮的事件
+//这个方法不会被触发，cancel键的buttonIndex为0
+-(void)alertViewCancel:(UIAlertView *)alertView
+{
+    NSLog(@"AlertView的取消按钮的事件aaaaaaaaaaaaaaaaaa");
+}
+#pragma mark - ALertView即将消失时的事件
+-(void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"ALertView即将消失时的事件");
+}
+#pragma mark - AlertView已经消失时执行的事件
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"AlertView已经消失时执行的事件");
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

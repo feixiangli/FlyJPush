@@ -14,6 +14,13 @@
 		047665921B68E24F001FA3BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047665911B68E24F001FA3BE /* Images.xcassets */; };
 		047665951B68E24F001FA3BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047665931B68E24F001FA3BE /* LaunchScreen.xib */; };
 		047665A11B68E24F001FA3BE /* FlyJPushTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 047665A01B68E24F001FA3BE /* FlyJPushTests.m */; };
+		047665AE1B68E40A001FA3BE /* libPushSDK-1.8.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 047665AD1B68E40A001FA3BE /* libPushSDK-1.8.3.a */; };
+		047665B01B68E45A001FA3BE /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047665AF1B68E45A001FA3BE /* PushConfig.plist */; };
+		047665B21B68F1AE001FA3BE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047665B11B68F1AE001FA3BE /* CFNetwork.framework */; };
+		047665B41B68F1BC001FA3BE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047665B31B68F1BC001FA3BE /* MobileCoreServices.framework */; };
+		047665B61B68F1CE001FA3BE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047665B51B68F1CE001FA3BE /* CoreTelephony.framework */; };
+		047665B81B68F1D6001FA3BE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 047665B71B68F1D6001FA3BE /* libz.dylib */; };
+		047665BA1B68F1EC001FA3BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047665B91B68F1EC001FA3BE /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,14 @@
 		0476659A1B68E24F001FA3BE /* FlyJPushTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyJPushTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0476659F1B68E24F001FA3BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047665A01B68E24F001FA3BE /* FlyJPushTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyJPushTests.m; sourceTree = "<group>"; };
+		047665AC1B68E40A001FA3BE /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
+		047665AD1B68E40A001FA3BE /* libPushSDK-1.8.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.3.a"; sourceTree = "<group>"; };
+		047665AF1B68E45A001FA3BE /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
+		047665B11B68F1AE001FA3BE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		047665B31B68F1BC001FA3BE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		047665B51B68F1CE001FA3BE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		047665B71B68F1D6001FA3BE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		047665B91B68F1EC001FA3BE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +62,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047665BA1B68F1EC001FA3BE /* SystemConfiguration.framework in Frameworks */,
+				047665B81B68F1D6001FA3BE /* libz.dylib in Frameworks */,
+				047665B61B68F1CE001FA3BE /* CoreTelephony.framework in Frameworks */,
+				047665B41B68F1BC001FA3BE /* MobileCoreServices.framework in Frameworks */,
+				047665B21B68F1AE001FA3BE /* CFNetwork.framework in Frameworks */,
+				047665AE1B68E40A001FA3BE /* libPushSDK-1.8.3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,11 @@
 		047665781B68E24F001FA3BE = {
 			isa = PBXGroup;
 			children = (
+				047665B91B68F1EC001FA3BE /* SystemConfiguration.framework */,
+				047665B71B68F1D6001FA3BE /* libz.dylib */,
+				047665B51B68F1CE001FA3BE /* CoreTelephony.framework */,
+				047665B31B68F1BC001FA3BE /* MobileCoreServices.framework */,
+				047665B11B68F1AE001FA3BE /* CFNetwork.framework */,
 				047665831B68E24F001FA3BE /* FlyJPush */,
 				0476659D1B68E24F001FA3BE /* FlyJPushTests */,
 				047665821B68E24F001FA3BE /* Products */,
@@ -81,6 +107,7 @@
 		047665831B68E24F001FA3BE /* FlyJPush */ = {
 			isa = PBXGroup;
 			children = (
+				047665AA1B68E3E9001FA3BE /* 3rd */,
 				047665881B68E24F001FA3BE /* AppDelegate.h */,
 				047665891B68E24F001FA3BE /* AppDelegate.m */,
 				0476658B1B68E24F001FA3BE /* ViewController.h */,
@@ -117,6 +144,24 @@
 				0476659F1B68E24F001FA3BE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		047665AA1B68E3E9001FA3BE /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+				047665AB1B68E40A001FA3BE /* lib */,
+			);
+			name = 3rd;
+			sourceTree = "<group>";
+		};
+		047665AB1B68E40A001FA3BE /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				047665AF1B68E45A001FA3BE /* PushConfig.plist */,
+				047665AC1B68E40A001FA3BE /* APService.h */,
+				047665AD1B68E40A001FA3BE /* libPushSDK-1.8.3.a */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +213,7 @@
 				TargetAttributes = {
 					047665801B68E24F001FA3BE = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = ZG7JFVU64G;
 					};
 					047665991B68E24F001FA3BE = {
 						CreatedOnToolsVersion = 6.4;
@@ -199,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047665B01B68E45A001FA3BE /* PushConfig.plist in Resources */,
 				047665901B68E24F001FA3BE /* Main.storyboard in Resources */,
 				047665951B68E24F001FA3BE /* LaunchScreen.xib in Resources */,
 				047665921B68E24F001FA3BE /* Images.xcassets in Resources */,
@@ -349,8 +396,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlyJPush/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FlyJPush/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -359,8 +413,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlyJPush/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FlyJPush/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -418,6 +479,7 @@
 				047665A61B68E24F001FA3BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		047665A71B68E24F001FA3BE /* Build configuration list for PBXNativeTarget "FlyJPushTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +488,7 @@
 				047665A91B68E24F001FA3BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
